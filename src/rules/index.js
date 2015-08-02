@@ -1,8 +1,8 @@
 'use strict';
 
-import BaseRules from './base.js';
-import NumberRules from './number.js';
-import StringRules from './string.js';
+import BaseRules from './base';
+import NumberRules from './number';
+import StringRules from './string';
 
 class Rules extends BaseRules {
   constructor(rules) {

@@ -1,17 +1,28 @@
 {
   "name": "react-validate-decorator",
-  "version": "0.0.1",
-  "description": "",
-  "main": "lib/index.js",
+  "version": "0.0.2",
+  "description": "Validation plugin for es6 react component",
+  "main": "lib/index",
   "scripts": {
     "test": "karma start",
-    "build": "rm -rf lib/ && babel --stage 0 src/ -d lib/"
+    "build": "rm -rf lib/ && babel --stage 0 src/ -d lib/",
+    "prepublish": "npm run build"
   },
   "author": "haoqiang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haoqiang/react-validate-decorator.git"
+  },
   "license": "MIT",
-  "dependencies": {
-    "classnames": "^2.1.1",
-    "react": "^0.13.2"
+  "keywords": [
+    "decorator",
+    "react",
+    "react-component",
+    "react-decorator",
+    "validation"
+  ],
+  "peerDependencies": {
+    "react": "0.13.x"
   },
   "devDependencies": {
     "babel": "^5.8.20",

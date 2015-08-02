@@ -1,10 +1,9 @@
 'use strict';
 
 import React from 'react';
-import classnames from 'classnames';
 
-import validationRules from '../rules/index.js';
-import DecoratorComponent from './decorator.jsx';
+import validationRules from '../rules/index';
+import DecoratorComponent from './decorator';
 
 export default (rules, interceptor) => BaseComponent =>
   class extends DecoratorComponent {
@@ -110,12 +109,9 @@ export default (rules, interceptor) => BaseComponent =>
     }
 
     render() {
+      let wrapperClassName = (this.state.validationState === '') ? '' : 'has-' + this.state.validationState;
       return (
-        <div className={classnames({
-        'has-success': (this.state.validationState === 'success'),
-        'has-warning': (this.state.validationState === 'warning'),
-        'has-error': (this.state.validationState === 'error')
-        })}>
+        <div className={wrapperClassName}>
           <BaseComponent ref="base" {...this.props}/>
           <p className='help-block'>
             {this.state.validationMessage}

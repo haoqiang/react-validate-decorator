@@ -1,6 +1,6 @@
 'use strict';
 
-import BaseRules from './base.js';
+import BaseRules from './base';
 
 export default class NumberRules extends BaseRules {
   constructor(rules) {
