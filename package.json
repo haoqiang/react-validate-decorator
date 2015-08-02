@@ -1,6 +1,6 @@
 {
   "name": "react-validate-decorator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Validation plugin for es6 react component",
   "main": "lib/index",
   "scripts": {
